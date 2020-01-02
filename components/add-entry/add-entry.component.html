@@ -1,0 +1,35 @@
+
+<form  class=" form" id="f" #f="ngForm"  (ngSubmit)="onSubmit(f)">
+    <h4>Add a New Entry :</h4>
+    <ul class="container col-md-11">
+        <div class="">
+            <input class="input-group-md lentitle" #title="ngModel" ngModel type="text" name="title"  placeholder="Add title...">
+        </div>
+        <br>
+        <div class="">
+            <input  class="input-group-md lendate" #date="ngModel" ngModel type="Date" name="date"  placeholder="Add date...">
+         </div>
+         <br>
+         <div class="input-group-prepend ">
+             <input class="input-group-text lendesc" #desc="ngModel" ngModel type="text" name="desc" placeholder="describe">
+             <input class= "btn btn-success" type="submit" value="Add" class="btn btn-info">
+            </div>
+        
+    </ul>
+</form>
+
+<!--#childtext (keyup)="onSubmit(childtext.value)"
+#childdate (keyup)="onSubmit(childdate.value)"
+#childdesc (keyup)="onSubmit(childdesc.value)" 
+<table border="1">
+    <tr>
+        <th style="padding : 10px">Title  </th>
+        <th style="padding : 10px">Date  </th>
+        <th style="padding : 10px"> Description</th>
+    </tr>
+    <tr >
+        <td style="padding : 10px">{{DiaryForm.get('title').value}}</td>
+        <td style="padding : 10px">{{DiaryForm.get('date').value}}</td>
+        <td style="padding : 10px">{{DiaryForm.get('desc').value}}</td>
+    </tr>
+</table>-->

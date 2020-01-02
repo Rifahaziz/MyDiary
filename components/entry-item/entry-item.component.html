@@ -1,0 +1,26 @@
+<h3 class="heading2">List of Important Entries : </h3>
+<table border = "1" class="items col-sm-6">
+
+   <!--{{entry | json}}-->
+    <tr>
+        <th  class="headings">Title  </th>
+        <th  class="headings" >Date  </th>
+        <th  class="headings"> Description</th>
+        <th  class="headings"> Remove</th>
+    </tr>
+   
+   <!-- <h3>{{i+1}} {{e.title}} </h3>  {{e.date.toDateString()}}
+    
+    <h5>{{e.desc}}</h5> -->
+    
+        <tr class="eachentry" *ngFor="let e of entry; let i=index" > 
+            <!--<ul class="eachentry" *ngFor="let e of entry; let i=index"></ul>-->
+            <td >{{e.title}}</td>
+            <td >{{e.date | date}}</td>
+            <td >{{e.desc}}</td>
+            <button (click)="onDelete(e)" class="del">X</button>
+        </tr>
+  
+</table>
+
+
